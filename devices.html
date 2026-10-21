@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devices — Smart Campus AI</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><h1>IoT-устройства</h1></div>
+<div class="toolbar">
+  <input id="search" type="search" placeholder="Поиск по ID, помещению, типу">
+  <select id="fStatus">
+    <option value="">Любой статус</option>
+    <option value="online">Online</option>
+    <option value="offline">Offline</option>
+  </select>
+  <select id="fType"><option value="">Все типы</option></select>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>ID</th><th>Помещение</th><th>Тип</th><th>Статус</th><th>Значение</th><th>Обновлено</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<p class="muted" id="count"></p>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/devices.js"></script>
+</body>
+</html>

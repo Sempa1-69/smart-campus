@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incidents — Smart Campus AI</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><h1>Инциденты</h1><button class="btn" id="addBtn" type="button">+ Новая заявка</button></div>
+<div class="toolbar">
+  <input id="search" type="search" placeholder="Поиск по названию, помещению, ответственному">
+  <select id="fStatus">
+    <option value="">Любой статус</option>
+    <option value="open">Open</option>
+    <option value="progress">In progress</option>
+    <option value="done">Done</option>
+  </select>
+  <select id="fPriority">
+    <option value="">Любой приоритет</option>
+    <option value="high">High</option>
+    <option value="medium">Medium</option>
+    <option value="low">Low</option>
+  </select>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Название</th><th>Помещение</th><th>Приоритет</th><th>Статус</th><th>Ответственный</th><th>Комментарий</th><th></th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<p class="muted" id="count"></p>
+
+<div class="modal-bg" id="modalBg">
+  <form class="modal" id="form" novalidate>
+    <h2 id="modalTitle">Новая заявка</h2>
+    <div class="form-row"><label for="fTitle">Название</label><input id="fTitle" required maxlength="80"></div>
+    <div class="form-row"><label for="fRoom">Помещение</label><select id="fRoom"></select></div>
+    <div class="form-row"><label for="fPrio">Приоритет</label>
+      <select id="fPrio"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></div>
+    <div class="form-row"><label for="fStat">Статус</label>
+      <select id="fStat"><option value="open">Open</option><option value="progress">In progress</option><option value="done">Done</option></select></div>
+    <div class="form-row"><label for="fAssignee">Ответственный</label>
+      <select id="fAssignee"><option>Инженер</option><option>Оператор</option><option>Администратор</option></select></div>
+    <div class="form-row"><label for="fComment">Комментарий</label><textarea id="fComment" rows="3" maxlength="300"></textarea></div>
+    <div class="err" id="formErr"></div>
+    <div class="actions"><button class="btn secondary" type="button" id="cancelBtn">Отмена</button><button class="btn" type="submit">Сохранить</button></div>
+  </form>
+</div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/incidents.js"></script>
+</body>
+</html>

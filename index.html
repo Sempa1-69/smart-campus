@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — Smart Campus AI</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main class="login-page">
+  <form class="login-card" id="loginForm" novalidate>
+    <div class="brand"><span class="logo">🎓</span> Smart Campus AI</div>
+    <h2>Вход в систему</h2>
+    <p class="muted">Учебная имитация входа. Роли — не настоящая защита.</p>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="admin@campus.edu" autocomplete="username" required>
+    </div>
+    <div class="form-row">
+      <label for="password">Пароль</label>
+      <input id="password" type="password" placeholder="Любой, от 4 символов" autocomplete="current-password" required>
+    </div>
+    <div class="form-row">
+      <label for="role">Роль</label>
+      <select id="role">
+        <option>Administrator</option>
+        <option>Engineer</option>
+        <option>Operator</option>
+      </select>
+    </div>
+    <div class="err" id="err" role="alert"></div>
+    <button class="btn" type="submit" style="width:100%">Войти</button>
+  </form>
+</main>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/login.js"></script>
+</body>
+</html>

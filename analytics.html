@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics — Smart Campus AI</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head">
+  <div><h1>AI Analytics</h1><span class="muted">Пороги + z-score + рекомендации. Не генеративный AI.</span></div>
+  <div><button class="btn" id="simBtn" type="button">▶ Симулировать показания</button> <button class="btn secondary" id="autoBtn" type="button">Авто: выкл</button></div>
+</div>
+<section class="kpis" id="kpis"></section>
+<div class="grid2">
+  <div class="card"><h3>CO₂ по помещениям</h3><div class="chart-box"><canvas id="co2Chart"></canvas></div></div>
+  <div class="card">
+    <h3>История параметра</h3>
+    <div class="toolbar">
+      <select id="selRoom"></select>
+      <select id="selParam"><option value="temperature">Температура</option><option value="co2">CO₂</option><option value="energy">Энергия</option></select>
+    </div>
+    <div class="chart-box" style="height:200px"><canvas id="histChart"></canvas></div>
+  </div>
+</div>
+<div class="card" style="margin-bottom:16px">
+  <h3>Обнаруженные аномалии</h3>
+  <div class="toolbar"><select id="fRisk"><option value="">Любой риск</option><option value="critical">Высокий</option><option value="warning">Средний</option></select></div>
+  <div class="risk-list" id="anomalies"></div>
+</div>
+<div class="card">
+  <h3>Рекомендации по помещениям</h3>
+  <div class="table-wrap"><table><thead><tr><th>Помещение</th><th>Статус</th><th>Рекомендация</th></tr></thead><tbody id="recs"></tbody></table></div>
+</div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings — Smart Campus AI</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar"></aside>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><h1>Настройки</h1></div>
+<div class="grid2">
+  <div class="card">
+    <h3>Тема оформления</h3>
+    <p class="muted">Выбор сохраняется в localStorage.</p>
+    <button class="btn" id="themeSwitch" type="button">Переключить тему</button>
+  </div>
+  <div class="card">
+    <h3>Параметры кампуса</h3>
+    <form id="campusForm" novalidate>
+      <div class="form-row"><label for="campusName">Название кампуса</label><input id="campusName" maxlength="60"></div>
+      <button class="btn" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Профиль</h3>
+    <p id="profileInfo"></p>
+  </div>
+  <div class="card">
+    <h3>Тестовые данные</h3>
+    <p class="muted">Вернёт помещения, устройства, инциденты и историю к исходным значениям.</p>
+    <button class="btn danger" id="resetBtn" type="button">Сбросить данные</button>
+  </div>
+</div>
+</main>
+</div>
+</div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/storage.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/settings.js"></script>
+</body>
+</html>
